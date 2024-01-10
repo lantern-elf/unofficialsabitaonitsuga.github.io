@@ -1,0 +1,398 @@
+:root {
+    --primary: #22092C;
+    --secondary: #872341;
+    --light: #BE3144;
+    --more_light: #F05941;
+    --facebook: #316FF6;
+    --twitter: #1DA1F2;
+    --instagram: #FF45B5;
+    --youtube: #CD201F;
+    --trello: #007AC0;
+    --credits: rgb(109, 177, 6);
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+html {
+    font-family: monospace;
+    color: white;
+}
+
+body {
+    background-color: var(--primary);
+
+    color: white;
+    font-family: monospace;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+}
+
+.parent {
+    margin: 16px;
+}
+
+.banner {
+    width: 100%;
+    height: 256px;
+    flex-shrink: 0;
+    background-color: #968C8C;
+    box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    background: url("assets/Reflection.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.profile_pict {
+    border-radius: 25px;
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+    top: 170px;
+    left: 64px;
+}
+
+.nav_menu {
+    width: max-content;
+    padding: 4px;
+    position: relative;
+    top: 11px;
+    left: 228px;
+    column-gap: 12px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.nav {
+    width: auto;
+    height: 32px;
+    padding: 24px;
+    display: inline;
+    border-radius: 20px;
+    background: var(--secondary);
+    box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+.nav:hover {
+    background: var(--more_light);
+    box-shadow: 0px 0px 4px var(--more_light) inset,
+        0px 0px 4px var(--more_light);
+}
+
+.nav_content {
+    cursor: pointer;
+    text-align: center;
+
+    margin: auto;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_content label {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.content {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 12px;
+    position: relative;
+    margin: auto;
+    top: 40px;
+}
+
+.container {
+    background-color: var(--secondary);
+    padding: 16px;
+    width: 87%;
+    box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+.container h1 {
+    font-size: 32px;
+}
+
+.container p {
+    font-size: 18px;
+}
+
+.container .info {
+    position: relative;
+    left: 2px;
+}
+
+.icon {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 8px;
+}
+
+.icon_size {
+    font-size: 32px;
+}
+
+.circle_border {
+    width: 52px;
+    height: 52px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.icon_hov {
+    transition: transform 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
+}
+
+.icon_hov:hover {
+    transform: translateY(-15%);
+}
+
+.facebook,
+.twitter,
+.instagram,
+.youtube,
+.trello {
+    transition: .3s;
+}
+
+.facebook:hover {
+    border-color: var(--facebook);
+    color: var(--facebook);
+}
+
+.twitter:hover {
+    border-color: var(--twitter);
+    color: var(--twitter);
+}
+
+.instagram:hover {
+    border-color: var(--instagram);
+    color: var(--instagram);
+}
+
+.youtube:hover {
+    border-color: var(--youtube);
+    color: var(--youtube);
+}
+
+.trello:hover {
+    border-color: var(--trello);
+    color: var(--trello);
+}
+
+.credits {
+    cursor: pointer;
+    transition-duration: .3s;
+    font-size: 12px;
+    padding: 8px;
+    border-radius: 45px;
+}
+
+.credits:hover {
+    background-color: var(--credits);
+    box-shadow: 0px 0px 4px var(--credits) inset,
+        0px 0px 4px var(--credits);
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        height: 128px;
+        border-radius: 16px;
+    }
+
+    .container {
+        padding: 8px;
+        border-radius: 16px;
+    }
+
+    .container h1 {
+        font-size: 18px;
+        padding: -9px;
+
+        position: relative;
+        top: -10;
+    }
+
+    .container p {
+        font-size: 12px;
+    }
+
+    .container .info {
+        font-size: 12px;
+        position: relative;
+        left: 2px;
+    }
+
+    .profile_pict {
+        width: 80px;
+        height: 80px;
+        border-radius: 16px;
+        top: 80px;
+        left: 24px;
+    }
+
+    .nav_menu {
+        position: relative;
+        left: 105px;
+        right: 0;
+        top: 4px;
+        bottom: 0;
+        column-gap: 8px;
+    }
+
+    .nav_content label {
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    .nav {
+        padding: 6px;
+        height: 20px;
+        border-radius: 16px;
+    }
+
+    .circle_border {
+        width: 32px;
+        height: 32px;
+        border: 1px solid white;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+    }
+
+    .icon_size {
+        font-size: 16px;
+    }
+
+    .credits {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .parent {
+        padding: 0px;
+    }
+
+    .banner {
+        height: 90px;
+        border-radius: 8px;
+    }
+
+    .profile_pict {
+        width: 70px;
+        height: 70px;
+        border-radius: 8px;
+        top: 50px;
+        left: 12px;
+    }
+
+    .content {
+        position: relative;
+        top: 16px;
+    }
+
+    .container {
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .container h1 {
+        font-size: 12px;
+    }
+
+    .container p {
+        font-size: 8px;
+    }
+
+    .container .info {
+        font-size: 6px;
+    }
+
+    .nav {
+        padding: 12px;
+        width: 50px;
+        height: 10px;
+        border-radius: 3px;
+    }
+
+    .nav_menu {
+        position: relative;
+        left: 90px;
+        right: 0;
+        top: 0px;
+        bottom: 0;
+        column-gap: 4px;
+    }
+
+    .nav_content label {
+        cursor: pointer;
+        font-size: 8px;
+    }
+
+    .circle_border {
+        width: 16px;
+        height: 16px;
+        border: 1px solid white;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+    }
+
+    .icon_size {
+        font-size: 8px;
+    }
+
+    .credits {
+        font-size: 4px;
+        padding: 2px;
+    }
+
+    .credits:hover {
+        background-color: var(--credits);
+        box-shadow: 0px 0px 2px var(--credits) inset,
+            0px 0px 2px var(--credits);
+    }
+
+}
